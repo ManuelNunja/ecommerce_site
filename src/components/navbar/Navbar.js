@@ -20,17 +20,13 @@ const Navbar = () => {
               <Nav.Link href="#action1">Inicio</Nav.Link>
               <Nav.Link href="#action2">Productos</Nav.Link>
               <Nav.Link href="#action2">Ofertas</Nav.Link>
-              <Nav.Link href="#action2"><FontAwesome></FontAwesome>Carrito de Compras</Nav.Link>
+              <NavDropdown title="Categorias" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Categoria 1</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Categoria 2</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Categoria 3</NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="#action2"><FontAwesome></FontAwesome></Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
           </Offcanvas.Body>
         </BTNavbar.Offcanvas>
       </Container>
