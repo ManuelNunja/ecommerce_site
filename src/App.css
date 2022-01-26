@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+html,body{
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+.menuBrand{
+  font-size: 20px;
+  font-weight: bold;
+  color: #ddd621 !important;
+}
+.menuitem{
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.35s ease-in-out !important;
+}
+.menuitem:hover{
+    color: red;
+}
+
 .App {
   text-align: center;
 }

@@ -1,13 +1,15 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faList, faListAlt, faRocket, faShoppingCart, faTags } from '@fortawesome/free-solid-svg-icons'
 
-const FontAwesome = () => {
-  return (
-    <div>
-       <FontAwesomeIcon icon={faShoppingCart} />
-    </div>
-  )
+const FontAwesome = ({iconName}) => {
+    let fontSize = "1x";
+    let fontColor = "#ddd621";
+    if(iconName == "faHome"){return(<FontAwesomeIcon icon={(faHome)} color={fontColor} size={fontSize}/>)}
+    if(iconName == "faList"){return(<FontAwesomeIcon icon={(faList)} color={fontColor} size={fontSize} />)}
+    if(iconName == "faTags"){return(<FontAwesomeIcon icon={(faTags)} color={fontColor} size={fontSize}/>)}
+    if(iconName == "faListAlt"){return(<FontAwesomeIcon icon={(faListAlt)} color={fontColor} size={fontSize}/>)}
+    if(iconName == "faShoppingCart"){return(<FontAwesomeIcon icon={(faShoppingCart)} color={fontColor} size={fontSize}/>)}
 };
 
 export default FontAwesome;
