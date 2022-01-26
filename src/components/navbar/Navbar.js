@@ -5,7 +5,16 @@ const Navbar = () => {
   return (
     <BTNavbar bg="light" expand={false}>
       <Container fluid>
-        <BTNavbar.Brand href="#" className="menuBrand">My E-commerce</BTNavbar.Brand>
+        <BTNavbar.Brand href="#" className="menuBrand">
+        <img
+          alt=""
+          src={require("../../../src/resources/icons/child.png")}
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+        />{' '}
+        My E-commerce
+        </BTNavbar.Brand>
         <BTNavbar.Toggle aria-controls="offcanvasNavbar" />
         <BTNavbar.Offcanvas
           id="offcanvasNavbar"
