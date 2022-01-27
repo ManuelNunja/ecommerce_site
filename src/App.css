@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+*{
+  transition: all 0.35s ease-in-out !important;
+}
 html,body{
   font-family: 'Chelsea Market', sans-serif;
   font-size: 16px;
@@ -14,12 +17,11 @@ html,body{
 .menuitem{
   font-weight: bold;
   font-size: 16px;
-  transition: all 0.35s ease-in-out !important;
+  color: #0d6efd;
 }
 .menuitem:hover{
     color: red;
 }
-
 .App {
   text-align: center;
 }

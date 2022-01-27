@@ -1,5 +1,6 @@
 import { Button, Container, Form, FormControl, Nav, Navbar as BTNavbar, NavDropdown, Offcanvas } from "react-bootstrap"
 import FontAwesome from '../FontAwesome'
+import CartIcon from "../cartIcon/CartIcon"
 
 const Navbar = () => {
   return (
@@ -15,12 +16,11 @@ const Navbar = () => {
         />{' '}
         My E-commerce
         </BTNavbar.Brand>
-        <BTNavbar.Toggle aria-controls="offcanvasNavbar" />
-        <BTNavbar.Offcanvas
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-          placement="end"
-        >
+        <div>
+          <CartIcon></CartIcon>&nbsp;&nbsp;
+          <BTNavbar.Toggle aria-controls="offcanvasNavbar" />
+        </div>
+        <BTNavbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel" className="menuBrand">My E-commerce</Offcanvas.Title>
           </Offcanvas.Header>
