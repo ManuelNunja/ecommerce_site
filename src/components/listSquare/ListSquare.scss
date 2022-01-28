@@ -1,0 +1,44 @@
+@import "../sass/_variables.scss";
+
+.listSquare--container{
+    height: calc(calc($px_site * 25) + 16px);
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    .listSquare--background{
+        height: calc($px_site * 24);
+        width: 50%;
+        border-radius: $px_site;
+        background-color: $color--secondary;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        gap: $px_site;
+        .listSquare--item{
+            width: calc($px_site * 20);
+            height: calc($px_site * 20);
+            border-radius: $px_site;
+            background-color: $color--third;
+            box-shadow: none;
+            border: solid 1px $color--primary;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            &:hover{
+                box-shadow: 0px 0px 6px 4px $color--shadow;
+            }
+            .listSquare--item--name{
+                color: white;
+                font-size: 20px;
+            }
+        }
+    }
+}

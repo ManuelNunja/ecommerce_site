@@ -1,0 +1,78 @@
+@import "../sass/_variables.scss";
+
+.headCarousel--container{
+    height: calc(calc($px_site * 32) + 16px);
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding: $px_site;
+    .headCarousel--background{
+        height: calc($px_site * 32);
+        width: 100%;
+        border-radius: $px_site;
+        background-color: $color--secondary;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        gap: $px_site;
+        .side--left{
+            width: calc(40% - 8px);
+            height: calc($px_site * 30);
+            border-radius: $px_site;
+            background-color: transparent;
+            border: solid 8px $color--primary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            .side--left--name{
+                color: $color--primary;
+                font-size: 56px;
+            }   
+        }
+        .side--right{
+            width: calc(60% - 16px);
+            height: calc($px_site * 30);
+            border-radius: $px_site;
+            background-color: $color--primary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            gap: $px_site;
+            .side--right--item{
+                width: calc(calc(100% / 6) - 14px);
+                height: calc(100% - 16px);
+                background-color: $color--secondary;
+                border-radius: $px_site;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                justify-items: center;
+                .text{
+                    color: $color--primary;
+                    font-size: 16px;
+                    text-align: left;
+                    padding: 16px;
+                }
+            }
+            .active{
+                width: calc(50% - 0px) !important;
+                background-color: $color--primary;
+                box-shadow:  0px 0px 1px 1px $color--secondary;
+                .text{
+                    color: $color--secondary;
+                    font-size: 16px;
+                    text-align: left;
+                    padding: 16px;
+                }
+            }
+        }
+    }
+}
