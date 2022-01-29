@@ -21,11 +21,11 @@
         justify-items: center;
         gap: $px_site;
         .side--left{
-            width: calc(40% - 8px);
+            width: calc(40% - 16px);
             height: calc($px_site * 30);
             border-radius: $px_site;
             background-color: transparent;
-            border: solid 8px $color--primary;
+            border: solid 4px $color--primary;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -36,18 +36,18 @@
             }   
         }
         .side--right{
-            width: calc(60% - 16px);
+            width: calc(60% - 8px);
             height: calc($px_site * 30);
             border-radius: $px_site;
-            background-color: $color--primary;
+            background-color: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
             justify-items: center;
             gap: $px_site;
             .side--right--item{
-                width: calc(calc(100% / 6) - 14px);
-                height: calc(100% - 16px);
+                width: calc(calc(100% / 6) - 10px);
+                height: calc(100% - 0px);
                 background-color: $color--secondary;
                 border-radius: $px_site;
                 cursor: pointer;
@@ -55,23 +55,24 @@
                 align-items: center;
                 justify-content: center;
                 justify-items: center;
-                .text{
-                    color: $color--primary;
-                    font-size: 16px;
-                    text-align: left;
-                    padding: 16px;
-                }
+                color: $color--primary;
+                font-size: 16px;
+                text-align: left;
+                padding: 32px;
+                border: solid 4px $color--primary;
+                transition: all 0.5s ease-in-out !important;
             }
-            .active{
+            >.active{
                 width: calc(50% - 0px) !important;
                 background-color: $color--primary;
-                box-shadow:  0px 0px 1px 1px $color--secondary;
-                .text{
-                    color: $color--secondary;
-                    font-size: 16px;
-                    text-align: left;
-                    padding: 16px;
-                }
+                //box-shadow: 0px 0px 2px 2px $color--primary;
+                border: solid 0px $color--primary;
+                text-shadow: white 1px 2px;
+                color: $color--secondary;
+                font-size: 24px;
+                text-align: left;
+                padding: 32px;
+                transition: all 0.5s ease-in-out !important;
             }
         }
     }

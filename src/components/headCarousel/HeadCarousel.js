@@ -1,7 +1,7 @@
 import "./HeadCarousel.scss"
 import HeadCarouselItem from "./HeadCarouselItem";
 
-const textItem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nulla quam voluptate qui repellat!."
+const textItem = "Lorem ipsum dolor sit amet consectetur adipisicing elit !!!"
 const items = [
     {itemId: "1", itemText: textItem},
     {itemId: "2", itemText: textItem},

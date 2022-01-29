@@ -30,12 +30,6 @@ const Navbar = () => {
               <Nav.Link href="#action2" className="menuitem"><FontAwesome iconName={"faList"}></FontAwesome>&nbsp;&nbsp;Productos</Nav.Link>
               <Nav.Link href="#action3" className="menuitem"><FontAwesome iconName={"faTags"}></FontAwesome>&nbsp;&nbsp;Ofertas</Nav.Link>
               <Nav.Link href="#action4" className="menuitem"><FontAwesome iconName={"faShoppingCart"}></FontAwesome>&nbsp;&nbsp;Carrito de compras</Nav.Link>
-              {/*<NavDropdown title="Categorias" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Categoria 1</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Categoria 2</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Categoria 3</NavDropdown.Item>
-              </NavDropdown>
-              */}
             </Nav>
           </Offcanvas.Body>
         </BTNavbar.Offcanvas>
