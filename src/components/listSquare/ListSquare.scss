@@ -1,7 +1,7 @@
 @import "../sass/_variables.scss";
 
 .listSquare--container{
-    height: calc(calc($px_site * 25));
+    height: calc(calc($px_site * 22));
     width: 100%;
     background-color: transparent;
     display: flex;
@@ -9,7 +9,7 @@
     justify-items: center;
     justify-content: center;
     .listSquare--background{
-        height: calc($px_site * 25);
+        height: calc($px_site * 22);
         width: calc(100% - 16px);
         border-radius: $px_site;
         background-color: $color--secondary;
@@ -23,23 +23,72 @@
             width: calc($px_site * 20);
             height: calc($px_site * 20);
             border-radius: $px_site;
-            background-color: $color--primary;
+            background-color: $color--secondary;
             box-shadow: none;
-            //border: solid 1px $color--primary;
+            border: solid 4px $color--primary;
             cursor: pointer;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             justify-items: center;
             &:hover{
                 //box-shadow: 0px 0px 6px 4px $color--shadow;
                 box-shadow: 0px 0px 8px 2px $color--primary;
+                background-color: $color--primary;
+            }
+            &:hover >.listSquare--item--name{
+                color: $color--secondary;
             }
             .listSquare--item--name{
-                color: $color--secondary;
+                color: $color--primary;
                 font-size: 20px;
-                font-weight: bold;
+                
+            }
+            &:hover .counterControl .counterNumber{
+                color: $color--secondary;
+            }
+            &:hover .counterControl .counterButton{
+                color: $color--secondary;
+                background-color: $color--secondary;
+                color: white;
+            }
+            &:hover .addCartButton{
+                border: solid 2px $color--secondary;
+                color: $color--secondary;
+            }
+            .counterControl{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                justify-items: center;
+                padding-top: 15px;
+                .counterNumber{
+                    width: 25px;
+                    height: 25px;
+                    color: white;
+                    font-weight: bold;
+                }
+                .counterButton{
+                    width: 32px;
+                    height: 32px;
+                    background-color: $color--primary;
+                    border-radius: $px_site;
+                    border-style: hidden;
+                }
+            }
+            .addCartButton{
+                width: 90%;
+                border: solid 2px $color--primary;
+                color: $color--primary;
+                border-radius: $px_site;
+                margin-top: $px_site;
+                padding: $px_site;
+                &:hover{
+                    background-color: $color--secondary !important;
+                    color: white !important;
+                }
             }
         }
     }

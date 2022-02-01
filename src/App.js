@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar';
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
 import ListSquare from './components/listSquare/ListSquare';
 import HeadCarousel from './components/headCarousel/HeadCarousel';
+import ItemCounter from './components/counter/ItemCounter';
 
 function App() {
   return (
