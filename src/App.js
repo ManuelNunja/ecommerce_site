@@ -6,13 +6,35 @@ import ItemListContainer from './components/itemListContainer/ItemListContainer'
 import ListSquare from './components/listSquare/ListSquare';
 import HeadCarousel from './components/headCarousel/HeadCarousel';
 import ItemCounter from './components/counter/ItemCounter';
+import {task} from "./helpers/promises"
+import { useState } from 'react';
+import ProductList from './components/productList/ProductList';
 
 function App() {
+  {/*const [errorMessage, setErrorMessage] = useState("");
+
+  task.then((result) => {
+    if(!result){
+      throw new Error("Error de logica")
+    }
+    console.log({result})
+  }, (error) => {
+      console.log({error})
+    }
+  )
+  .catch((error) => {
+    setErrorMessage(error.message)
+    console.log("error catch", error)
+  }).finally(() => {
+    console.log("Finalizado")
+  })*/}
   return (
     <div className="App">
       <Navbar></Navbar>
       <HeadCarousel></HeadCarousel>
       <ListSquare></ListSquare>
+      <ProductList></ProductList>
+      {/*<div>{errorMessage}</div>*/}
       {/*<ItemListContainer></ItemListContainer>*/}
     </div>
   );
