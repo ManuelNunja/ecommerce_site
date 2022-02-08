@@ -34,7 +34,11 @@ function App() {
       <div className='div--separator'></div>
       <HeadCarousel></HeadCarousel>
       <ListSquare></ListSquare>
+      <div className='div--separator'></div>
+      <h2 className='h2--title'>Premium Products</h2>
+      <h3 className='h3--title'>My E-commerce</h3>
       <ProductList></ProductList>
+      <div className='div--separator'></div>
       {/*<div>{errorMessage}</div>*/}
       {/*<ItemListContainer></ItemListContainer>*/}
     </div>

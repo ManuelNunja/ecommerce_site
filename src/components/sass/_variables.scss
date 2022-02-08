@@ -20,13 +20,20 @@ $color--product--fifth: #FA9A39;
 $px_site: 8px;
 
 .h2--title{
-    font-size: 32px;
+    font-size: 40px;
     width: 100%;
-    background-color: red;
+    background-color: transparent;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+.h3--title{
+    font-size: 16px;
+    width: 100%;
+    background-color: transparent;
     color: white;
     -webkit-text-stroke: 1px black;
 }
 .div--separator{
     height: 56px;
-    background-color: red;
+    background-color: transparent;
 }
