@@ -1,9 +1,11 @@
 import ItemCounter from "../counter/ItemCounter";
 
 const ProductItem = ({id, name, description, stock}) => {
-    return <div>
-        <div>Producto: {name}</div>
-        <div>Descripcion: {description}</div>
+    return <div className="productList--item">
+        <div className="name">{name}</div>
+        <div className="subName">Producto</div>
+        <br></br>
+        <div className="description">Descripcion: {description}</div>
         <ItemCounter stock={stock}></ItemCounter>
     </div>;
 };

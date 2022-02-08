@@ -8,5 +8,5 @@ export const task = new Promise((resolve, reject) =>{
 export const productsAPI = new Promise((resolve, reject) =>{
     setTimeout(() => {
         resolve(products)
-    }, 3000);
+    }, 0);
 })

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { productsAPI } from "../../helpers/promises";
 import ProductItem from "./ProductItem";
+import "./ProductItem.scss"
 
 const ProductList = () => {
-    const [products, setProducts] = useState([])
+    const [stateProducts, setProducts] = useState([])
     
     useEffect(() =>{
         getProducts()
@@ -21,12 +22,14 @@ const ProductList = () => {
             console.log("Finalizacion");
         }
     }
-    return <div>
-        {
-            products.map((product) =>(
-                <ProductItem key={product.id} {...product}></ProductItem>
-            ))
-        }
+    return <div className="productList">
+        <div className="productList--background">
+            {
+                stateProducts.map((product) =>(
+                    <ProductItem key={product.id} {...product}></ProductItem>
+                ))
+            }
+        </div>
     </div>;
 };
 

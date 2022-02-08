@@ -1,8 +1,13 @@
-import { Button, Container, Form, FormControl, Nav, Navbar as BTNavbar, NavDropdown, Offcanvas } from "react-bootstrap"
-import FontAwesome from '../FontAwesome'
-import CartIcon from "../cartIcon/CartIcon"
+import { Button, Container, Form, FormControl, Nav, Navbar as BTNavbar, NavDropdown, Offcanvas } from "react-bootstrap";
+import FontAwesome from '../FontAwesome';
+import CartIcon from "../cartIcon/CartIcon";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [stateDarkMode, setDarkMode] = useState(false);
+  const encenderpagar = () => {
+    setDarkMode(!stateDarkMode);
+  }
   return (
     <BTNavbar bg="light" expand={false}>
       <Container fluid>
@@ -30,6 +35,7 @@ const Navbar = () => {
               <Nav.Link href="#action2" className="menuitem"><FontAwesome iconName={"faList"}></FontAwesome>&nbsp;&nbsp;Productos</Nav.Link>
               <Nav.Link href="#action3" className="menuitem"><FontAwesome iconName={"faTags"}></FontAwesome>&nbsp;&nbsp;Ofertas</Nav.Link>
               <Nav.Link href="#action4" className="menuitem"><FontAwesome iconName={"faShoppingCart"}></FontAwesome>&nbsp;&nbsp;Carrito de compras</Nav.Link>
+              <Nav.Link onClick={encenderpagar} className="menuitem"><FontAwesome iconName={"faLightbulb"}></FontAwesome>&nbsp;&nbsp;Dark Mode: {stateDarkMode ? " On" : " Off"}</Nav.Link>
             </Nav>
           </Offcanvas.Body>
         </BTNavbar.Offcanvas>
