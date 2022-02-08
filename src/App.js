@@ -31,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
+      <div className='div--separator'></div>
       <HeadCarousel></HeadCarousel>
       <ListSquare></ListSquare>
       <ProductList></ProductList>

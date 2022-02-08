@@ -9,7 +9,7 @@ const Navbar = () => {
     setDarkMode(!stateDarkMode);
   }
   return (
-    <BTNavbar bg="light" expand={false}>
+    <BTNavbar fixed="top" bg="light" expand={false}>
       <Container fluid>
         <BTNavbar.Brand href="#" className="menuBrand">
         <img
