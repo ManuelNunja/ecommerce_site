@@ -34,7 +34,7 @@ const Navbar = () => {
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link className="menuitem"><FontAwesome iconName={"faHome"}></FontAwesome>&nbsp;&nbsp;<Link to="/">Inicio</Link></Nav.Link>
               <Nav.Link className="menuitem"><FontAwesome iconName={"faList"}></FontAwesome>&nbsp;&nbsp;<Link to="/ProductList">Productos</Link></Nav.Link>
-              <Nav.Link className="menuitem"><FontAwesome iconName={"faTags"}></FontAwesome>&nbsp;&nbsp;<Link to="/ListSquareItemDetail">Detalle</Link></Nav.Link>
+              <Nav.Link className="menuitem"><FontAwesome iconName={"faTags"}></FontAwesome>&nbsp;&nbsp;Ofertas</Nav.Link>
               <Nav.Link className="menuitem"><FontAwesome iconName={"faShoppingCart"}></FontAwesome>&nbsp;&nbsp;Carrito de compras</Nav.Link>
               <Nav.Link onClick={encenderpagar} className="menuitem"><FontAwesome iconName={"faLightbulb"}></FontAwesome>&nbsp;&nbsp;Dark Mode: {stateDarkMode ? " On" : " Off"}</Nav.Link>
             </Nav>
