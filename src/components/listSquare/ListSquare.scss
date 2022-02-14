@@ -59,10 +59,8 @@
             }
             &:hover .viewDetail{
                 border: solid 2px $color--secondary;
-                .textLink{
-                    color: $color--secondary;
-                    text-decoration: none;
-                }
+                color: $color--secondary;
+                text-decoration: none;
             }
             .counterControl{
                 display: flex;
@@ -104,13 +102,12 @@
                 border-radius: $px_site;
                 margin-top: $px_site;
                 padding: $px_site;
+                text-decoration: none;
                 &:hover{
                     background-color: $color--secondary !important;
-                    color: white !important;
-                    .textLink{
-                        color: $color--primary;
-                        text-decoration: none;
-                    }
+                    color: $color--primary;
+                    text-decoration: none;
+                    
                 }
                 .textLink{
                     color: $color--primary;
@@ -121,7 +118,7 @@
     }
 }
 .listSquare--itemDetail{
-    height: calc(calc($px_site * 50));
+    height: calc(calc($px_site * 55));
     width: 100%;
     background-color: transparent;
     display: flex;
@@ -129,9 +126,10 @@
     justify-items: center;
     justify-content: center;
     .listSquare--itemDetail--background{
-        height: calc($px_site * 45);
+        height: calc($px_site * 50);
         width: calc(60% - 16px);
         border-radius: $px_site;
+        border: solid 4px $color--primary;
         background-color: $color--secondary;
         display: flex;
         flex-direction: column;
@@ -140,6 +138,7 @@
         justify-items: center;
         gap: $px_site;
         padding: calc($px_site * 6);
+        box-shadow: 0px 0px 8px 8px $color--primary;
         .name{
             color: $color--primary;
             font-size: calc($px_site * 6);
@@ -192,20 +191,14 @@
             width: 20%;
             border: solid 2px $color--primary;
             color: $color--primary;
+            text-decoration: none;
             border-radius: $px_site;
             margin-top: $px_site;
             padding: $px_site;
             cursor: pointer;
             &:hover{
                 background-color: $color--primary !important;
-                .textLink{
-                    color: $color--secondary;
-                    text-decoration: none;
-                }
-            }
-            .textLink{
-                color: $color--primary;
-                text-decoration: none;
+                color: $color--secondary;
             }
         }
     }

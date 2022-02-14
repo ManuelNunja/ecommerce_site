@@ -16,7 +16,8 @@ const ListSquareItemDetail = (productId, productName, productDescription, produc
             <div>{productBrand}</div>
             <div>{productDescription}</div>
             <ItemCounter stock={productStock}></ItemCounter> */}
-            <div className='backButton'><Link className='textLink' to="/">Volver</Link></div>
+            {/* <div className='backButton'><Link className='textLink' to="/">Volver</Link></div> */}
+            <Link className='backButton' to="/">Volver</Link>
         </div>
     </div>
   )

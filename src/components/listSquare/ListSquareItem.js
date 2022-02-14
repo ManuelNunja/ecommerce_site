@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ViewProduct from "../addCart/ViewProduct";
-import ItemCounter from "../counter/ItemCounter";
 import "./ListSquare.scss";
 
 const ListSquareItem =({productId, productName, productDescription, productPrice, productBrand, productStock}) => {
