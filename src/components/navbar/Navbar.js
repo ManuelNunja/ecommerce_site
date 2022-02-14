@@ -2,6 +2,7 @@ import { Button, Container, Form, FormControl, Nav, Navbar as BTNavbar, NavDropd
 import FontAwesome from '../FontAwesome';
 import CartIcon from "../cartIcon/CartIcon";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [stateDarkMode, setDarkMode] = useState(false);
@@ -31,10 +32,10 @@ const Navbar = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="#action1" className="menuitem"><FontAwesome iconName={"faHome"}></FontAwesome>&nbsp;&nbsp;Inicio</Nav.Link>
-              <Nav.Link href="#action2" className="menuitem"><FontAwesome iconName={"faList"}></FontAwesome>&nbsp;&nbsp;Productos</Nav.Link>
-              <Nav.Link href="#action3" className="menuitem"><FontAwesome iconName={"faTags"}></FontAwesome>&nbsp;&nbsp;Ofertas</Nav.Link>
-              <Nav.Link href="#action4" className="menuitem"><FontAwesome iconName={"faShoppingCart"}></FontAwesome>&nbsp;&nbsp;Carrito de compras</Nav.Link>
+              <Nav.Link className="menuitem"><FontAwesome iconName={"faHome"}></FontAwesome>&nbsp;&nbsp;<Link to="/">Inicio</Link></Nav.Link>
+              <Nav.Link className="menuitem"><FontAwesome iconName={"faList"}></FontAwesome>&nbsp;&nbsp;<Link to="/ProductList">Productos</Link></Nav.Link>
+              <Nav.Link className="menuitem"><FontAwesome iconName={"faTags"}></FontAwesome>&nbsp;&nbsp;<Link to="/ListSquareItemDetail">Detalle</Link></Nav.Link>
+              <Nav.Link className="menuitem"><FontAwesome iconName={"faShoppingCart"}></FontAwesome>&nbsp;&nbsp;Carrito de compras</Nav.Link>
               <Nav.Link onClick={encenderpagar} className="menuitem"><FontAwesome iconName={"faLightbulb"}></FontAwesome>&nbsp;&nbsp;Dark Mode: {stateDarkMode ? " On" : " Off"}</Nav.Link>
             </Nav>
           </Offcanvas.Body>

@@ -1,15 +1,15 @@
 import { useState } from "react";
-import AddCartButton from "../addCart/AddCartButton";
+import ViewProduct from "../addCart/ViewProduct";
 import ItemCounter from "../counter/ItemCounter";
 import "./ListSquare.scss";
 
-
-const ListSquareItem =({productId, productName, productPrice, productBrand}) => {
-    const [selectedItem, setSelectedItem] = useState(null)    
+const ListSquareItem =({productId, productName, productDescription, productPrice, productBrand, productStock}) => {
+    const [selectedItem, setSelectedItem] = useState(null)
+    const texto = productDescription.substring(1, 55) + " ..."
     return <div className="listSquare--item">
         <div className="listSquare--item--name">{productName}</div>
-        <ItemCounter stock={10}></ItemCounter>
-        <AddCartButton productId={productId} setSelectedItem={setSelectedItem}></AddCartButton>
+        <div>{texto}</div>
+        <ViewProduct productId={productId} setSelectedItem={setSelectedItem}></ViewProduct>
     </div>;
   };
 

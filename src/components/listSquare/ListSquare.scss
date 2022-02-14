@@ -1,7 +1,7 @@
 @import "../sass/_variables.scss";
 
 .listSquare--container{
-    height: calc(calc($px_site * 22));
+    height: calc(calc($px_site * 26));
     width: 100%;
     background-color: transparent;
     display: flex;
@@ -9,7 +9,7 @@
     justify-items: center;
     justify-content: center;
     .listSquare--background{
-        height: calc($px_site * 22);
+        height: calc($px_site * 27);
         width: calc(100% - 16px);
         border-radius: $px_site;
         background-color: $color--secondary;
@@ -20,8 +20,8 @@
         justify-items: center;
         gap: $px_site;
         .listSquare--item{
-            width: calc($px_site * 20);
-            height: calc($px_site * 20);
+            width: calc($px_site * 35);
+            height: calc($px_site * 25);
             border-radius: $px_site;
             background-color: $color--secondary;
             box-shadow: none;
@@ -57,6 +57,13 @@
                 border: solid 2px $color--secondary;
                 color: $color--secondary;
             }
+            &:hover .viewDetail{
+                border: solid 2px $color--secondary;
+                .textLink{
+                    color: $color--secondary;
+                    text-decoration: none;
+                }
+            }
             .counterControl{
                 display: flex;
                 flex-direction: row;
@@ -89,6 +96,116 @@
                     background-color: $color--secondary !important;
                     color: white !important;
                 }
+            }
+            .viewDetail{
+                width: 80%;
+                border: solid 2px $color--primary;
+                color: $color--primary;
+                border-radius: $px_site;
+                margin-top: $px_site;
+                padding: $px_site;
+                &:hover{
+                    background-color: $color--secondary !important;
+                    color: white !important;
+                    .textLink{
+                        color: $color--primary;
+                        text-decoration: none;
+                    }
+                }
+                .textLink{
+                    color: $color--primary;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.listSquare--itemDetail{
+    height: calc(calc($px_site * 50));
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    .listSquare--itemDetail--background{
+        height: calc($px_site * 45);
+        width: calc(60% - 16px);
+        border-radius: $px_site;
+        background-color: $color--secondary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        gap: $px_site;
+        padding: calc($px_site * 6);
+        .name{
+            color: $color--primary;
+            font-size: calc($px_site * 6);
+        }
+        .brand{
+            color: $color--shadow;
+            font-size: calc($px_site * 2);
+        }
+        .description{
+            text-align: justify;
+            color: white;
+        }
+        .counterControl{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            padding-top: 15px;
+            .counterNumber{
+                width: 25px;
+                height: 25px;
+                color: white;
+                font-weight: bold;
+            }
+            .counterButton{
+                width: 32px;
+                height: 32px;
+                background-color: $color--primary;
+                border-radius: $px_site;
+                border-style: hidden;
+            }
+        }
+        .addCartButton{
+            width: 20%;
+            border: solid 2px $color--primary;
+            color: $color--primary;
+            border-radius: $px_site;
+            margin-top: $px_site;
+            padding: $px_site;
+            &:hover{
+                cursor: pointer;
+                background-color: $color--primary !important;
+                color: $color--secondary !important;
+                border: solid 2px $color--secondary;
+            }
+            
+        }
+        .backButton{
+            width: 20%;
+            border: solid 2px $color--primary;
+            color: $color--primary;
+            border-radius: $px_site;
+            margin-top: $px_site;
+            padding: $px_site;
+            cursor: pointer;
+            &:hover{
+                background-color: $color--primary !important;
+                .textLink{
+                    color: $color--secondary;
+                    text-decoration: none;
+                }
+            }
+            .textLink{
+                color: $color--primary;
+                text-decoration: none;
             }
         }
     }

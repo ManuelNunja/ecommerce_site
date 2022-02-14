@@ -9,6 +9,9 @@ import ItemCounter from './components/counter/ItemCounter';
 import {task} from "./helpers/promises"
 import { useState } from 'react';
 import ProductList from './components/productList/ProductList';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import ListSquareItemDetail from './components/listSquare/ListSquareItemDetail';
 
 function App() {
   {/*const [errorMessage, setErrorMessage] = useState("");
@@ -29,19 +32,24 @@ function App() {
     console.log("Finalizado")
   })*/}
   return (
-    <div className="App">
-      <Navbar></Navbar>
-      <div className='div--separator'></div>
-      <HeadCarousel></HeadCarousel>
-      <ListSquare></ListSquare>
-      <div className='div--separator'></div>
-      <h2 className='h2--title'>Premium Products</h2>
-      <h3 className='h3--title'>My E-commerce</h3>
-      <ProductList></ProductList>
-      <div className='div--separator'></div>
-      {/*<div>{errorMessage}</div>*/}
-      {/*<ItemListContainer></ItemListContainer>*/}
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar></Navbar>
+        <div className='div--separator'></div>
+        <Routes>
+          {/* <HeadCarousel></HeadCarousel> */}
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/productList" element={<ProductList />} />
+          <Route exact path="/ListSquareItemDetail" element={<ListSquareItemDetail />} />
+          {/* <div className='div--separator'></div>
+          <h2 className='h2--title'>Premium Products</h2>
+          <h3 className='h3--title'>My E-commerce</h3> */}
+        </Routes>
+        <div className='div--separator'></div>
+        {/*<div>{errorMessage}</div>*/}
+        {/*<ItemListContainer></ItemListContainer>*/}
+      </div>
+    </BrowserRouter>
   );
 }
 
