@@ -22,15 +22,20 @@ const ProductList = () => {
             console.log("Finalizacion");
         }
     }
-    return <div className="productList">
-        <div className="productList--background">
-            {
-                stateProducts.map((product) =>(
-                    <ProductItem key={product.id} {...product}></ProductItem>
-                ))
-            }
+    return <div>
+        <div className='div--separator'></div>
+        <h2 className='h2--title'>Premium Products</h2>
+        <h3 className='h3--title'>My E-commerce</h3>
+        <div className="productList">
+            <div className="productList--background">
+                {
+                    stateProducts.map((product) =>(
+                        <ProductItem key={product.id} {...product}></ProductItem>
+                    ))
+                }
+            </div>
         </div>
-    </div>;
+    </div>
 };
 
 export default ProductList;

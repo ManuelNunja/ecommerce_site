@@ -12,6 +12,7 @@ import ProductList from './components/productList/ProductList';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import ListSquareItemDetail from './components/listSquare/ListSquareItemDetail';
+import Cart from './components/Cart/Cart';
 
 function App() {
   {/*const [errorMessage, setErrorMessage] = useState("");
@@ -41,6 +42,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/productList" element={<ProductList />} />
           <Route exact path="/ListSquareItemDetail" element={<ListSquareItemDetail />} />
+          <Route exact path="/Cart" element={<Cart />} />
           {/* <div className='div--separator'></div>
           <h2 className='h2--title'>Premium Products</h2>
           <h3 className='h3--title'>My E-commerce</h3> */}

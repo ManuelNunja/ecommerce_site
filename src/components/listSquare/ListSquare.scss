@@ -1,7 +1,7 @@
 @import "../sass/_variables.scss";
 
 .listSquare--container{
-    height: calc(calc($px_site * 26));
+    height: calc(calc($px_site * 28));
     width: 100%;
     background-color: transparent;
     display: flex;
@@ -12,7 +12,7 @@
         height: calc($px_site * 27);
         width: calc(100% - 16px);
         border-radius: $px_site;
-        background-color: $color--secondary;
+        background-color: transparent;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -25,7 +25,7 @@
             border-radius: $px_site;
             background-color: $color--secondary;
             box-shadow: none;
-            border: solid 4px $color--primary;
+            border: solid 4px transparent;
             cursor: pointer;
             display: flex;
             flex-direction: column;
@@ -34,8 +34,9 @@
             justify-items: center;
             &:hover{
                 //box-shadow: 0px 0px 6px 4px $color--shadow;
-                box-shadow: 0px 0px 8px 2px $color--primary;
+                //box-shadow: 0px 0px 8px 2px $color--primary;
                 background-color: $color--primary;
+                border-color: $color--secondary;
             }
             &:hover >.listSquare--item--name{
                 color: $color--secondary;

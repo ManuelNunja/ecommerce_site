@@ -20,8 +20,11 @@ const ListSquare = () => {
   }
   </div>
     {
-        products.map(({id, name, description, price, brand, stock}) => (
+        /*products.map(({id, name, description, price, brand, stock}) => (
           <ListSquareItem productId={id} key={id} productName={name} productDescription={description} productPrice={price} productBrand={brand} productStock={stock}></ListSquareItem>
+        ))*/
+        products.map(({...product}) => (
+          <ListSquareItem key={product.id} {...product}></ListSquareItem>
         ))
     }
   </div>
